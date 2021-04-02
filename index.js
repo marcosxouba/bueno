@@ -101,8 +101,8 @@ const {
   //--Kontak
   const vcard = 'BEGIN:VCARD\n'
   + 'VERSION:3.0\n'
-  + 'FN:Mr.Pato\n' // Nama
-  + 'ORG:Mr.Pato-Bot;\n' // Nama bot
+  + 'FN:BOT ACTIVOS 24/7\n' // Nama
+  + 'ORG:BOT ACTIVOS 24/7;\n' // Nama bot
   + 'TEL;type=CELL;type=VOICE;waid=17693039228:+1 769 303-9223n' // Nomor bot
   + 'END:VCARD' 
   
@@ -267,7 +267,7 @@ const {
 			  if (anu.action == 'add') {
 				  num = anu.participants[0]
 				  teks = `Hola @${num.split('@')[0]} Bienvenid@ a *${mdata.subject}*
-  ┏━━━━━━━━━━━━━━━━━━━━
+  ┏━━━━━━━━━━━━━━━━━
   ┃〘  *PRESENTACIÓN OBLIGATORIA* 〙
   ┠⊷️ *Nombre* :
   ┠⊷️ *Edad* :
@@ -277,8 +277,8 @@ const {
 _*Recuerda leer las normas de la descripción.*_
 
 *protegido por:* 
-*L̴͕̰̠̤̃̒̒ḛ̵̠̟̠͆̓̎n̴̘͈͊͛͗͝a̶̛͓͊ A̵n̴o̶n̷y̶m̸i̶s̴s̶          ☦⪻̤̈N̴͖e̵͠b̷̛̈́á̴̬̌l̶͐́o̸͡⪼̤̈☦*
-⠀⠀⠀   ⠀*☦⪻̤̈M̸̞̱̜͒̈͑̐̈́̇•̴̻̖̼͓͈̀̈́̈̓̍̔̚ͅT̴̤̩̀͑̄͗̒͑̕ḩ̸͇͔̑͒́͌̄e̷̙̱̎•̷̔̓̉̽̑̕̕H̶͔̰͑å̷͙̹̾͝͝ť̵̎͐́̏̒̈ë̶̛͖͓̙͎́́ṛ̷̊̊⪼̤̈☦̤̈*
+*L̴͕̰̠̤̃̒̒ḛ̵̠̟̠͆̓̎n̴̘͈͊͛͗͝a̶̛͓͊ A̵n̴o̶n̷y̶m̸i̶s̴s̶          ⪻̤̈N̴͖e̵͠b̷̛̈́á̴̬̌l̶͐́o̸͡⪼̤̈*
+⠀⠀⠀   ⠀*⪻̤̈M̸̞̱̜͒̈͑̐̈́̇•̴̻̖̼͓͈̀̈́̈̓̍̔̚ͅT̴̤̩̀͑̄͗̒͑̕ḩ̸͇͔̑͒́͌̄e̷̙̱̎•̷̔̓̉̽̑̕̕H̶͔̰͑å̷͙̹̾͝͝ť̵̎͐́̏̒̈ë̶̛͖͓̙͎́́ṛ̷̊̊⪼̤̈*
  `
 				  Lxa.sendMessage(mdata.id, teks, MessageType.text, { contextInfo: {"mentionedJid": [num]}})
 			  } else if (anu.action == 'remove') {
@@ -320,26 +320,26 @@ _*Recuerda leer las normas de la descripción.*_
 		const is = budy.slice(0).trim().split(/ +/).shift().toLowerCase()
 			  mess = {
 	wait: '⏳ Espera ',
-	success: '🎉 Con exito',
+	success: '🎉 Con éxito',
 	Public: '🛡 Modo privado activado',
 	ferr: 'Lo siento ha habido un error',
 	limitend: 'Tiempo agotado',
 	error: {
-	stick: 'Intentalo más tarde :(',
+	stick: 'Inténtalo más tarde :(',
 	Iv: 'Error en el link'
 	},
 	only: {
-	  group: 'Este comando solo puede ser usado en grupos',
-	  ownerG: 'Este comando solo puede ser usado por el dueño del grupo',
-	  ownerB: 'Este comando solo puede ser usado por el dueño del bot',
+	  group: 'Este comando sólo puede ser usado en grupos',
+	  ownerG: 'Este comando sólo puede ser usado por el dueño del grupo',
+	  ownerB: 'Este comando sólo puede ser usado por el dueño del bot',
 	  admin: 'Debes de ser admin para este comando',
 	  Badmin: 'El bot debe ser admin para este comando',
-	  daftarB: `Hola, usa *${prefix}verify* para poder usar el bot`
+	  daftarB: `Hola, usa *${prefix}verify* para poder usar el bot, *sólo si eres admin*`
 	}
   }
 		const totalchat = await Lxa.chats.all()
 			  const botNumber = Lxa.user.jid
-			  const ownerNumber = [`${up.ownerNumber}@s.whatsapp.net`] // replace this with your number
+			  const ownerNumber = [`${up.+34626218348}@s.whatsapp.net`] // replace this with your number
 			  const isGroup = from.endsWith('@g.us')
 			  const sender = isGroup ? mek.participant : mek.key.remoteJid
 			  const groupMetadata = isGroup ? await Lxa.groupMetadata(from) : ''
@@ -905,11 +905,11 @@ _*Recuerda leer las normas de la descripción.*_
 	if (!isRegister) return reply(mess.only.daftarB)
 	uangkau = checkATMuser(sender)
 	hasil = `〘  *ATM* 〙
-  ╔════════════════════
+  ╔═════════════════
   ╠≽️ *Nama* : *${pushname}*
   ╠≽️ *Saldo* : *Rp.${uangkau}.-*
   ╠≽️ *Nomor* : *${sender.split("@")[0]}*
-  ╚════════════════════`
+  ╚═════════════════`
 	reply(hasil)
 	break
   
@@ -1001,13 +1001,13 @@ _*Recuerda leer las normas de la descripción.*_
   })
   break
   
-  //---donasi
+  //---Donación
   case 'donasi':
   Lxa.updatePresence(from, Presence.composing)
   if (!isRegister) return reply(mess.only.daftarB)
   hasil = `
   
-  _Este bot no se comparte :)_
+  _Este bot no se comparte, es exclusivo de ACTIVOS 24/7 :)_
   
   *Pulsa :* _${Pulsa}_
   *Dana :* _${Dana}_
@@ -1171,7 +1171,7 @@ _*Recuerda leer las normas de la descripción.*_
   nimek = n[Math.floor(Math.random() * n.length)];
   pok = await getBuffer(nimek)
   Lxa.sendMessage(from, pok, image, {
-	quoted: mek, caption: `Mr.Pato-Bot`
+	quoted: mek, caption: `BOT ACTIVOS 24/7`
   })
   
   } catch {
@@ -1225,7 +1225,7 @@ _*Recuerda leer las normas de la descripción.*_
   nimek = n[Math.floor(Math.random() * n.length)];
   pok = await getBuffer(nimek)
   Lxa.sendMessage(from, pok, image, {
-	quoted: mek, caption: `Mr.Pato-Bot`
+	quoted: mek, caption: `BOT ACTIVOS 24/7`
   })
   
   break
@@ -1250,7 +1250,7 @@ _*Recuerda leer las normas de la descripción.*_
 	nimek = n[Math.floor(Math.random() * n.length)];
 	pok = await getBuffer(nimek)
 	Lxa.sendMessage(from, pok, image, {
-  quoted: mek, caption: `Mr.Pato-Bot`
+  quoted: mek, caption: `BOT ACTIVOS 24/7`
 	})
 	
 	} catch {
@@ -1280,7 +1280,7 @@ _*Recuerda leer las normas de la descripción.*_
 	nimek = n[Math.floor(Math.random() * n.length)];
 	pok = await getBuffer(nimek)
 	Lxa.sendMessage(from, pok, image, {
-  quoted: mek, caption: `Mr.Pato-Bot`
+  quoted: mek, caption: `BOT ACTIVOS 24/7`
 	})
 	
 	} catch {
@@ -1306,7 +1306,7 @@ _*Recuerda leer las normas de la descripción.*_
 	nimek = n[Math.floor(Math.random() * n.length)];
 	pok = await getBuffer(nimek)
 	Lxa.sendMessage(from, pok, image, {
-  quoted: mek, caption: `Mr.Pato-Bot`
+  quoted: mek, caption: `BOT ACTIVOS 24/7`
 	})
 	
 	} catch {
@@ -1332,7 +1332,7 @@ _*Recuerda leer las normas de la descripción.*_
 	nimek = n[Math.floor(Math.random() * n.length)];
 	pok = await getBuffer(nimek)
 	Lxa.sendMessage(from, pok, image, {
-  quoted: mek, caption: `Mr.pato-Bot`
+  quoted: mek, caption: `BOT ACTIVOS 24/7`
 	})
 	
 	} catch {
