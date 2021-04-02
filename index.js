@@ -3495,6 +3495,7 @@ _*Recuerda leer las normas de la descripción.*_
   //--Mengambil link grup
 	  case 'linkgroup':
 	  case 'linkgc':
+	  case 'link':
 		  if (!isGroup) return reply(mess.only.group)
 		  if (!isGroupAdmins) return reply(mess.only.admin)
 		  if (!isBotGroupAdmins) return reply(mess.only.Badmin)
@@ -3584,20 +3585,20 @@ _*Recuerda leer las normas de la descripción.*_
 	addRegisteredUser(sender, namaUser, umurUser, time, serialUser)
 	hasil = `〘  *Vericación* 〙
   Código : *${serialUser}*
-  ╔════════════════════
+  ╔══════════════════
   ╠≽️ *Nombre* : *${namaUser}*
   ╠≽️ *Número* : *${sender.split("@")[0]}*
-  ╚════════════════════`
+  ╚══════════════════`
   reply(hasil)
 	console.log(color('[REGISTER]'), color(time, 'yellow'), 'Name:', color(namaUser, 'cyan'), 'Age:', color(umurUser, 'cyan'), 'Serial:', color(serialUser, 'cyan'), 'in', color(sender || groupName))
   } else {
 	addRegisteredUser(sender, namaUser, umurUser, time, serialUser)
 	hasil = `〘  *Verificación* 〙
   Código : *${serialUser}*
-  ╔════════════════════
+  ╔══════════════════
   ╠≽️ *Nombre* : *${namaUser}*
   ╠≽️ *Número* : *${sender.split("@")[0]}*
-  ╚════════════════════`
+  ╚══════════════════`
   reply(hasil)
 	console.log(color('[REGISTER]'), color(time, 'yellow'), 'Name:', color(namaUser, 'cyan'), 'Age:', color(umurUser, 'cyan'), 'Serial:', color(serialUser, 'cyan'))
   }
@@ -3630,7 +3631,7 @@ _*Recuerda leer las normas de la descripción.*_
   if (!isGroupAdmins) return reply(mess.only.admin)
   if (!isBotGroupAdmins) return reply(mess.only.Badmin)
   open = {
-	text: `Grupo abierto por @${sender.split("@")[0]}\n ahora todos pueden usar el bot`,
+	text: `Grupo abierto por @${sender.split("@")[0]}\n ahora todos pueden usar el grupo`,
 	contextInfo: {
   mentionedJid: [sender]
 	}
@@ -3722,11 +3723,11 @@ _*Recuerda leer las normas de la descripción.*_
 						  if (isWelkom) return reply('Ya esta activo')
 						  welkom.push(from)
 						  fs.writeFileSync('./data/welkom.json', JSON.stringify(welkom))
-						  reply('Se activo con exito')
+						  reply('Se activó con éxito')
 					  } else if (Number(args[0]) === 0) {
 						  welkom.splice(from, 1)
 						  fs.writeFileSync('./data/welkom.json', JSON.stringify(welkom))
-						  reply('Se desactivo con exito')
+						  reply('Se desactivó con éxito')
 					  } else {
 						  reply('1 para activar, 0 desactivar')
 					  }
@@ -3758,7 +3759,7 @@ _*Recuerda leer las normas de la descripción.*_
 							  reply(err)
 						  })
 					  } else {
-						  reply('No se encontro')
+						  reply('No se encontró')
 					  }
 					  break
   
